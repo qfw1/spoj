@@ -2,9 +2,9 @@
 
 abstract class BASE {
     
-    protected function readline($len = 1024)
+    protected function readline()
     {
-        return stream_get_line(STDIN, 16384, PHP_EOL);
+        return trim(fgets( STDIN ));
     }
     
     public function run(){}
